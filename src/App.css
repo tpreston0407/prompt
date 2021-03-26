@@ -1,0 +1,23 @@
+.form-container {
+    height: 600px;
+    width: 350px;
+}
+
+.form-view {
+    height: 600px;
+}
+
+.form-group {
+}
+
+.form-optional {
+    font-size: 1.25rem;
+    margin: 20px 0px;
+}
+.form-optional .form-check label {
+    padding-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}

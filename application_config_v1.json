@@ -1,0 +1,131 @@
+{
+  "application": {
+    "account": {
+      "type": "struct",
+      "required": true,
+      "label": "Account info",
+      "screen": 2,
+      "fields": {
+        "email": {
+          "type": "email",
+          "required": true,
+          "label": "Email"
+        }
+      }
+    },
+    "applicant": {
+      "type": "struct",
+      "required": true,
+      "label": "User info",
+      "screen": 1,
+      "fields": {
+        "first_name": {
+          "type": "string",
+          "required": true,
+          "label": "First name"
+        },
+        "middle_name": {
+          "type": "string",
+          "required": false,
+          "label": "Middle name"
+        },
+        "last_name": {
+          "type": "string",
+          "required": true,
+          "label": "Last name"
+        },
+        "date_of_birth": {
+          "type": "date",
+          "required": true,
+          "label": "Date of birth"
+        },
+        "age": {
+          "type": "integer",
+          "required": false,
+          "label": "Age"
+        },
+        "spouse": {
+          "type": "struct",
+          "required": false,
+          "label": "Spouse",
+          "screen": 3,
+          "parent": "applicant",
+          "fields": {
+            "first_name": {
+              "type": "string",
+              "required": true,
+              "label": "First name"
+            },
+            "middle_name": {
+              "type": "string",
+              "required": false,
+              "label": "Middle name"
+            },
+            "last_name": {
+              "type": "string",
+              "required": true,
+              "label": "Last name"
+            },
+            "date_of_birth": {
+              "type": "date",
+              "required": true,
+              "label": "Date of birth"
+            }
+          }
+        },
+        "dependents": {
+          "type": "struct",
+          "required": false,
+          "label": "Dependent children",
+          "screen": 4,
+          "parent": "applicant",
+          "fields": {
+            "number_of_children": {
+              "type": "integer",
+              "required": true,
+              "label": "Number of dependents"
+            }
+          }
+        }
+      }
+    },
+    "mailing_address": {
+      "type": "struct",
+      "required": true,
+      "label": "Mailing address",
+      "screen": 5,
+      "fields": {
+        "address1": {
+          "type": "string",
+          "required": true,
+          "label": "Address"
+        },
+        "address2": {
+          "type": "string",
+          "required": false,
+          "label": "Address line 2"
+        },
+        "address3": {
+          "type": "string",
+          "required": false,
+          "label": "Address line 3"
+        },
+        "city": {
+          "type": "string",
+          "required": true,
+          "label": "City"
+        },
+        "state": {
+          "type": "string",
+          "required": true,
+          "label": "State"
+        },
+        "zip": {
+          "type": "string",
+          "required": true,
+          "label": "Zip code"
+        }
+      }
+    }
+  }
+}
